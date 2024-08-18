@@ -25,7 +25,7 @@ bool check_if_socket_connected(int clientSocket)
 
 static void messenger(int clientSocket)
 {
-    char buffer[1024] = {0};
+    char buffer[2048] = {0};
     if (recv(clientSocket, buffer, sizeof(buffer), 0) == -1)
     {
         std::cerr << "Error reading socket" << std::endl;
