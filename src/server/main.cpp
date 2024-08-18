@@ -35,7 +35,7 @@ int main(int argc, char const *argv[])
     socklen_t client_len = sizeof(clientAddr);
     while (true)
     {
-        int clientSocket = accept(serverSocket, (struct sockaddr *)&serverAddr, &client_len);
+        int clientSocket = accept(serverSocket, (struct sockaddr *)&clientAddr, &client_len);
         if (clientSocket == -1)
         {
             std::cerr << "Error accepting connection" << std::endl;
